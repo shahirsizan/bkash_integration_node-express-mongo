@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 const Error = () => {
-  return (
-    <div>Error</div>
-  )
-}
+	const searchData = new URLSearchParams(window.location.search);
+	const message = searchData.get("message");
+	return <div>Payment {message}</div>;
+};
 
-export default Error
+export default Error;

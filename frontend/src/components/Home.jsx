@@ -6,10 +6,12 @@ const Home = () => {
 		try {
 			const { data } = await axios.post(
 				"http://localhost:5000/api/bkash/payment/create",
-				{ amount: 50, orderId: 1 }
+				{ amount: 250 }
 			);
-			console.log(data);
-			// window.location.href = data.bkashURL;
+			// At last, got { data } from paymentController.payment_create
+			//console.log(data);
+			window.location.href = data.bkashURL;
+			// `bkashURL` A.K.A `data.bkashURL` will be directly put into the address bar of browser
 		} catch (error) {
 			// console.log(error.response.data);
 		}
