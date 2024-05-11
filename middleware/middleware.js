@@ -20,7 +20,12 @@ class middleware {
 					},
 				}
 			);
-			console.log(data);
+			globals.set("id_token", data.id_token, { protected: true });
+			console.log("hello from middleware last code line before next()");
+			// console.log(data);
+			//Works till here! but ekhon atkay gesi
+			next();
+			console.log("hello from middleware last code linee after next()");
 		} catch (error) {
 			return res.status(401).json({ error: error.message });
 		}
