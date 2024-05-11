@@ -1,7 +1,7 @@
 class paymentController {
 	payment_create = async (req, res) => {
-		console.log(req.body.config.data);
-		//EKHANE ESHE ATGAY GESI
+		console.log(req.body);
+		// atuku porjonto hocche takar amount er code
 	};
 }
 

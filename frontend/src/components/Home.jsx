@@ -1,3 +1,4 @@
+import React from "react";
 import axios from "axios";
 
 const Home = () => {
@@ -5,12 +6,12 @@ const Home = () => {
 		try {
 			const { data } = await axios.post(
 				"http://localhost:5000/api/bkash/payment/create",
-				{ amount: 100, orderId: 1 },
-				{ withCredentials: true }
+				{ amount: 50, orderId: 1 }
 			);
 			console.log(data);
+			// window.location.href = data.bkashURL;
 		} catch (error) {
-			console.log(error);
+			// console.log(error.response.data);
 		}
 	};
 	return (
